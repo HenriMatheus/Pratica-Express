@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Banco de Notas</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Adicionar nota:</h1>
+    <form action="/adicionar_nota" method="POST">
+        <label for="titulo">Titulo da nota:</label>
+        <input type="text" id="titulo" name="titulo">
+        <br>
+        <label for="conteudo">Conteudo:</label>
+        <textarea id="conteudo" name="conteudo"></textarea>
+        <button type="submit">Adicionar</button>
+    </form>
+    <p>Você pode criar mais notas <%= 5 - quant_notas%></p>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Banco de Notas</title>
+</head>
+
+<body>
+    <h1>Bem-vindo ao Banco de Notas</h1>
+    <p>Total de notas: <%= quant_notas %></p>
+    <a href="/adicionar_nota">Adicionar Nota |</a>
+    <a href="/apagar_notas">Apagar todas as notas |</a>
+    <a href="/ler">Ler todas as notas</a>
+
+    <ul>
+        <% if (cannotAddNotes) { %>
+            <li>Não pode criar mais que 5 notas</li>
+        <% } %>
+        <% if (!isAllowedTime) { %>
+            <li>Só pode acessar o sistema entre 9h e 18h.</li>
+        <% } %>
+    </ul>
+</body>
+
+</html>

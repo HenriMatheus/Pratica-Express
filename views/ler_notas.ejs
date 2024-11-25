@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ler Notas</title>
+</head>
+<body>
+    <h1>Ler Todas as Notas</h1>
+    <p>Total de notas: <%= quant_notas %></p>
+    <ul>
+        <% notas.forEach(function(nota) { %>
+            <li>
+                <strong><%= nota.titulo %></strong><br>
+                <%= nota.conteudo %>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/">Voltar para a página principal</a>
+</body>
+</html>
